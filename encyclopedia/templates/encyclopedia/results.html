@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block body %}
+    {% for item in results %}
+        <p><a href="{% url 'encyclopedia:display' item %}">{{ item }}</a></p>
+    {% endfor %}
+{% endblock %}
